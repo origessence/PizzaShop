@@ -1,0 +1,19 @@
+{% extends 'base.signup.html'%}
+{% load bootstrap3 %}
+
+{%block title%} Войти{%endblock%}
+
+{%block heading%} Страница Регистрации {%endblock%}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <h3>Владелец</h3>
+  {% bootstrap_form user_form%}
+  <h3>Пиццерия</h3>
+  {%bootstrap_form pizzashop_form%}
+  <button type="submit" class ="btn btn-red pull-right" >Зарегестрировать</button>
+
+</form>
+<a href="{% url 'pizzashop-sign-in'%}">У меня есть аккаунт</a>
+{%endblock%}
