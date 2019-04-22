@@ -22,3 +22,6 @@ social-auth-app-django==3.1.0
 social-auth-core==3.1.0
 sqlparse==0.3.0
 urllib3==1.24.1
+whitenoise==4.1.2
+dj-database-url==0.5.0
+psycopg2==2.6.2

@@ -25,7 +25,7 @@ SECRET_KEY = '$+#homf4n2=ndnopd=jv#udt)8z5c_d2k5qo=_zt$mf*5x2woi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://limitless-woodland-23487.herokuapp.com/','localhost', '127.0.0.1']
 
 
 # Application definition
@@ -164,3 +164,10 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, ' staticfiles')
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
