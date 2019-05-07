@@ -17,5 +17,5 @@ application = get_wsgi_application()
 
 
 # для хироку ститики
-from whitenoise.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
+#from whitenoise.django import DjangoWhiteNoise
+#application = DjangoWhiteNoise(application)
