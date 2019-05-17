@@ -32,6 +32,6 @@ class Client(models.Model):
     #blank = True не обязательно к заполнению
     phone = models.CharField(max_length = 20, blank=True)
     address = models.CharField(max_length = 30, blank=True)
-
+    
     def __str__(self):
         return self.user.get_full_name
