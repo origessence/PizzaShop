@@ -174,7 +174,7 @@ import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
-#try:
-#    from settings_prod import *
-#except:
-#    pass
+try:
+   from settings_prod import *
+except:
+   pass
